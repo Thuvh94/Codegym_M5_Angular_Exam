@@ -19,7 +19,7 @@
     <tbody>
     <tr *ngFor="let book of listBook">
       <td>{{book.id}}</td>
-      <td><a [routerLink]="['/detailUser',book.id]">{{book.title}}</a></td>
+      <td><a [routerLink]="['/detailBook',book.id]">{{book.title}}</a></td>
       <td>{{book.author}}</td>
       <td>
         <button [routerLink]="['/updateBook',book.id]" class="btn btn-success">Sửa</button>
