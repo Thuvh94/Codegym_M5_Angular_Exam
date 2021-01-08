@@ -9,6 +9,7 @@ import {BooksService} from '../../service/books.service';
 })
 export class ListComponent implements OnInit {
   listBook: IBook[];
+  total: number;
   constructor(private bookService: BooksService) { }
 
   ngOnInit(): void {
@@ -18,6 +19,7 @@ export class ListComponent implements OnInit {
   getAllBooks(): IBook[] {
     this.bookService.getAllBooks().subscribe((result) => {
       this.listBook = result;
+      this.total = this.listBook.length;
     });
     return this.listBook;
   }
